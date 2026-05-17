@@ -1,7 +1,11 @@
 # Build stage
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY backend /app/backend
+
+# Copy the backend directory from your repository root into the container
+COPY backend ./backend
+
+# Navigate into the backend directory and compile the package
 RUN cd backend && mvn package -DskipTests
 
 # Run stage
