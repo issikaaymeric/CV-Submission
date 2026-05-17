@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/cvapp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Password123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+sql:
+  init:
+    mode: always
+    platform: mysql
+    schema-locations: classpath:/db/schema.sql
+    data-locations: classpath:/db/data.sql
