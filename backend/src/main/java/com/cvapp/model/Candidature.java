@@ -1,4 +1,4 @@
-﻿package com.cvapp.model;
+package com.cvapp.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
